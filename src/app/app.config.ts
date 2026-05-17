@@ -2,13 +2,13 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChang
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideKirby } from '@kirbydesign/designsystem';
+import { provideKirby, withGlobalSetup } from '@kirbydesign/designsystem';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideKirby()
+    provideKirby(withGlobalSetup())
   ]
 };
