@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { CardComponent, CheckboxComponent, ItemComponent } from "@kirbydesign/designsystem";
 
 @Component({
   selector: 'app-todo-list',
-  imports: [],
+  imports: [ItemComponent, CheckboxComponent, CardComponent],
   templateUrl: './todo-list.html',
-  styleUrl: './todo-list.scss',
+  styleUrls: ['./todo-list.scss'],
 })
 export class TodoList {
 
