@@ -1,11 +1,14 @@
 <kirby-app>
-  <kirby-page
-    titleAlignment="center"
-    title="Structure"
-    subtitle="Structure you life">
+  <kirby-page>
+    <kirby-header title="Structure" subtitle1="Structure your life">
+      <kirby-action-group *kirbyHeaderActions>
+        <button kirby-button attentionLevel="3">
+          <kirby-icon name="add"></kirby-icon><span>Add task</span>
+        </button>
+      </kirby-action-group>
+    </kirby-header>
     <kirby-page-content>
-      <app-todo-list/>
+      <app-todo-list />
     </kirby-page-content>
   </kirby-page>
 </kirby-app>
-

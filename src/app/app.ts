@@ -1,13 +1,33 @@
 import { Component, signal } from '@angular/core';
-import { TodoList } from "./todo-list/todo-list";
-import { PageComponent, PageContentComponent } from "@kirbydesign/designsystem/page";
-import { AppComponent as KirbyAppComponent } from '@kirbydesign/designsystem/kirby-app';
+import {
+  KirbyAppModule,
+  ActionGroupComponent,
+  PageComponent,
+  PageContentComponent,
+  HeaderActionsDirective,
+  HeaderComponent,
+  IconComponent,
+  IconModule,
+  ButtonComponent,
+} from '@kirbydesign/designsystem';
+
+import { TodoList } from './todo-list/todo-list';
 
 @Component({
   selector: 'app-root',
-  imports: [KirbyAppComponent, PageComponent, PageContentComponent, TodoList],
+  imports: [
+    KirbyAppModule,
+    PageComponent,
+    PageContentComponent,
+    TodoList,
+    HeaderComponent,
+    IconModule,
+    ButtonComponent,
+    ActionGroupComponent,
+    HeaderActionsDirective,
+  ],
   templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
 })
 export class App {
   protected readonly title = signal('structure');
