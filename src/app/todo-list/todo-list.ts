@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {
   CardComponent,
   CheckboxComponent,
@@ -12,4 +12,10 @@ import { IconModule } from '@kirbydesign/designsystem/icon';
   templateUrl: './todo-list.html',
   styleUrls: ['./todo-list.scss'],
 })
-export class TodoList {}
+export class TodoList {
+  readonly isChecked = signal(false);
+
+  onCheckboxChange(checked: boolean) {
+    this.isChecked.set(checked);
+  }
+}

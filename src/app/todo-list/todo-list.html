@@ -1,6 +1,8 @@
 <h1 class="kirby-text-xlarge">Todo-list</h1>
 <kirby-card>
   <kirby-item>
-    <kirby-checkbox slot="start">Do the dishes</kirby-checkbox>
+    <kirby-checkbox slot="start" (checkedChange)="onCheckboxChange($event)">
+      <span [class.checked]="isChecked()">Do the dishes</span>
+    </kirby-checkbox>
   </kirby-item>
 </kirby-card>
