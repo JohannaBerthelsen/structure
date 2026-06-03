@@ -30,5 +30,5 @@ import { TodoList } from './todo-list/todo-list';
   styleUrls: ['./app.scss'],
 })
 export class App {
-  protected readonly title = signal('structure');
+  protected addTask() {}
 }
