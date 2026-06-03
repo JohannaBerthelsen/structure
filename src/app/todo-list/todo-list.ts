@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, Signal, signal, WritableSignal } from '@angular/core';
 import {
   CardComponent,
   CheckboxComponent,
@@ -13,9 +13,9 @@ import { IconModule } from '@kirbydesign/designsystem/icon';
   styleUrls: ['./todo-list.scss'],
 })
 export class TodoList {
-  readonly isChecked = signal(false);
+  protected readonly isChecked: WritableSignal<boolean> = signal(false);
 
-  onCheckboxChange(checked: boolean) {
+  protected onCheckboxChange = (checked: boolean): void => {
     this.isChecked.set(checked);
-  }
+  };
 }
